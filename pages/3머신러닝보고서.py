@@ -19,11 +19,14 @@ st.sidebar.header('3️⃣머신러닝 보고서')
 df = pd.read_csv('diabetes.csv')
 st.header("당뇨병 머신러닝 보고서")
 st.subheader('데이터보기')
-st.write(df)
 
 # 값이0인것들 평균값으로 대체
 zero_features = ['Glucose', 'BloodPressure','SkinThickness','Insulin','BMI']
 df[zero_features]=df[zero_features].replace(0, df[zero_features].mean())
+
+st.write(df)
+
+
 
 # 맨 끝이 Outcome 칼럼으로 레이블 값임, 칼럼 위치 -1을 이용해 추출
 X = df.drop('Outcome', axis =1)
