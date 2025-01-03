@@ -56,11 +56,3 @@ with t4:
 
     
 
-# st.subheader('데이터 파악')
-# st.write(df.head(10))
-# st.subheader('데이터 통계')
-# st.dataframe(df.describe())    
-# st.subheader('데이터 추출')
-# col=st.multiselect('select column',df.columns)
-# new_df=df.loc[:,col]
-# st.write(new_df)
